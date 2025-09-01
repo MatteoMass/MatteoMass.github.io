@@ -1,429 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Matteo Massetti</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Massetti | Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
 </head>
+<body class="antialiased">
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile mx-auto mb-2" src="assets/img/profile.png"
-                    alt="..." /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mobile-applications">Mobile Applications</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-
-            </ul>
+    <!-- Header & Nav -->
+    <header class="campari-bg-blue text-white py-4 px-[5%] sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold font-serif tracking-wider">Matteo Massetti</div>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="hover:campari-text-orange transition duration-300">About</a>
+                <a href="#projects" class="hover:campari-text-orange transition duration-300">Projects</a>
+                <a href="#experience" class="hover:campari-text-orange transition duration-300">Experience</a>
+                <a href="#education" class="hover:campari-text-orange transition duration-300">Education</a>
+                <!-- MODIFICA: Aggiunto link Certificazioni -->
+                <a href="#certifications" class="hover:campari-text-orange transition duration-300">Certifications</a>
+                <a href="#skills" class="hover:campari-text-orange transition duration-300">Skills</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-    </nav>
-    <!-- Page Content-->
-    <div class="container-fluid p-0">
-        <!-- About-->
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    Matteo
-                    <span class="text-primary">Massetti</span>
-                </h1>
-                <div class="subheading mb-5">
-                    <a href="mailto:matteomassetti8@gmail.com">matteomassetti8@gmail</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-700">Projects</a>
+            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-700">Experience</a>
+            <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-700">Education</a>
+            <!-- MODIFICA: Aggiunto link Certificazioni -->
+            <a href="#certifications" class="block py-2 px-4 text-sm hover:bg-gray-700">Certifications</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-700">Skills</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sezione About -->
+        <section id="about" class="min-h-screen flex items-center py-20 px-[5%] overflow-hidden">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2 text-center md:text-left z-10">
+                    <h1 class="text-6xl md:text-8xl font-black campari-text-red leading-none font-serif" style="text-shadow: 2px 2px 0px var(--campari-blue);">Matteo Massetti</h1>
+                    <h2 class="text-2xl md:text-4xl campari-text-blue mt-2 font-serif italic">Software Engineer</h2>
+                    <p class="mt-6 text-lg max-w-xl mx-auto md:mx-0">
+                        My name is Matteo Massetti, I was born in 1997, and I am a Software Engineer. I have been interested in the world of computer science and programming since I was a young boy, but it was in 2016, when I enrolled in the Faculty of Computer Science in Perugia, that I was able to materialize my passion.
+                    </p>
+                    <a href="mailto:matteomassetti8@gmail.com" class="inline-block campari-bg-red text-white font-bold py-3 px-8 rounded-md mt-8 text-lg hover:opacity-90 transition-transform hover:scale-105 duration-300 shadow-lg">Contact Me</a>
                 </div>
-                <p class="lead mb-5">My name is Matteo Massetti, I was born in 1997, and I am a Software Engineer. I have been
-                    interested in the world of computer science and programming since I was a young boy, but it was in
-                    2016, when I enrolled in the Faculty of Computer Science in Perugia, that I was able to materialize
-                    my passion.<br />
-                    Since then I have never stopped growing in the different fields of programming, testing my skills
-                    with mobile applications, algorithms and utility programs. In recent years I have focused on
-                    creating and training Artificial Intelligence and Machine Learning models, but without neglecting
-                    the other aspects.<br /><br />
-                    <a href="assets/pdf/cv_en.pdf" target="_blank"> CV English</a><br />
-                    <a href="assets/pdf/cv_it.pdf" target="_blank"> CV Italian</a>
-
-                </p>
-
-                <div class="social-icons">
-                    <a class="social-icon" href="https://www.linkedin.com/in/matteo-massetti-5bab15215/"
-                        data-toggle="tooltip" title="LinkedIn" data-offset="0 10" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="https://github.com/MatteoMass" target="_blank"><i
-                            class="fab fa-github"></i></a>
+                <div class="md:w-1/2 flex justify-center items-center">
+                    <div class="relative w-full max-w-lg h-96">
+                        <!-- MODIFICA: Forme decorative ingrandite -->
+                        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full opacity-80"></div>
+                        <div class="absolute bottom-0 right-1/4 w-[28rem] h-[28rem] bg-red-500/10 rounded-2xl rotate-45"></div>
+                    </div>
                 </div>
-
-
             </div>
-
         </section>
 
-        <hr class="m-0" />
-        <!-- Projects-->
-        <section class="resume-section" id="projects">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Projects</h2>
-
-                <p>Some of my most recent and significant projects.</p>
-
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Leveraging Physical Cues for Learned Representations in Visual Question
-                            Answering</h3>
-                        <div class="subheading mb-3">Python, Pytorch, Machine Learning</div>
-
-                        <p>
-                            Inferring knowledge from various sources and data, such as natural language
-                            and visual data, is challenging. Several tasks were presented to reach this aim,
-                            however, it is not just a matter of solving the task, but it is the assessment of
-                            the models' ability to ground natural language information in the visual world.
-                            GuessWhat?! is an evaluation framework aiming at assessing the performances
-                            of multi-modal conversational models. It is structured as a game in which two
-                            players are collaborating for reaching a common objective, by the means of
-                            generating and answering questions related to a visual scene.
-                            This work presents a new version of the Imagination Module, which is part
-                            of both player architectures and helps them to improve their understanding of
-                            textual and visual information. The presented version integrates the information
-                            about object attributes in the learned representation, to further improve the
-                            generalization and grounding capabilities of the models.
+        <!-- Sezione Progetti -->
+        <section id="projects" class="py-20 px-[5%]" style="background-color: var(--campari-dark-cream);">
+            <div class="container mx-auto">
+                <h2 class="section-title">Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-2xl font-bold mb-2 campari-text-red">MoneyTrack</h3>
+                        <p class="mb-4 text-sm">
+                          An Android application that allows the user to track and review all the earning and expenses. 
+                          The main goal of MoneyTrack is to be simple to use, to provide a quick way to enter a new 
+                          expense or income (in app called Bids) and an intuitive category management.
                         </p>
-                        <a href="https://etd.adm.unipi.it/t/etd-06222023-204437" target="_blank">Thesis </a>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2023</span></div>
-                </div>
-
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Brain Tumor Detection</h3>
-                        <div class="subheading mb-3">Python, TensoFlow, Keras</div>
-
-                        <p>
-                            In this project, I implemented a convolutional neural network to perform semantic
-                            segmentation of MRIs depicting brains. For each input image, a binary mask is produced in
-                            which the area of the brain affected by the tumour is highlighted. Given the nature of the
-                            problem, I implemented two different architectures from scratch: Fully Convolutional Network
-                            and U-net.
-                        </p>
-                        <a href="https://github.com/MatteoMass/CNN-in-tumor-detection-on-MRI" target="_blank">View on
-                            Github </a>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">May 2022</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Irony and Sarcasm detection in tweets</h3>
-                        <div class="subheading mb-3">Python, TensoFlow, Keras, Hugging Face</div>
-
-                        <p>
-                            In this project, developed in collaboration with a colleague from the University of Pisa, I
-                            implemented several machine learning models to solve the tasks of the <a
-                                href="http://www.di.unito.it/~tutreeb/ironita-evalita18/index.html"
-                                target="_blank">EVALITA</a> challenge. We tested different architectures including an
-                            implementation of BERT, convolutional layers, GRU and LSTM so as to detect the presence of
-                            irony and sarcasm in tweets.
-                        </p>
-                        <a href="https://github.com/MatteoMass/IronySarcasmDetectorIT" target="_blank">View on Github
+                        <a href="https://matteomass.github.io/MoneyTrackApp/" target="_blank" 
+                           class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">
+                           Link &rarr;
                         </a>
+                      </div>
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-2xl font-bold mb-2 campari-text-red">Leveraging Physical Cues for Learned Representations in Visual Question Answering</h3>
+                        <p class="mb-4 text-sm">Inferring knowledge from various sources and data, such as natural language and visual data, is challenging. This work present a new module for Neural Netowrk Architectures aimed at improving this capability.</p>
+                        <a href="https://etd.adm.unipi.it/t/etd-06222023-204437" target="_blank"  class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Link &rarr;</a>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">November 2021</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Smart Traffic Lights</h3>
-                        <div class="subheading mb-3">Python, PyGame, IoT, Fuzzy Logic</div>
-
-                        <p>
-                            In this project, developed in collaboration with two colleagues from the University of Pisa,
-                            we conceived and designed a smart solution to the problem of traffic generated at traffic
-                            light-controlled intersections. The solution uses IoT sensors to detect the busiest lanes
-                            and to detect weather conditions (rain), together with a controller that uses Fuzzy Logic to
-                            modify traffic light timers to avoid traffic and accidents
-                        </p>
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-2xl font-bold mb-2 campari-text-red">Brain Tumor Detection</h3>
+                        <p class="mb-4 text-sm">In this project, I implemented a convolutional neural network to perform semantic segmentation of MRIs depicting brains.</p>
+                        <a href="https://github.com/MatteoMass/CNN-in-tumor-detection-on-MRI" target="_blank" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Link &rarr;</a>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary" target="_blank">June 2021</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Low Rank Approximation with Normal Equation and Cholesky Factorization</h3>
-                        <div class="subheading mb-3">Julia, Cholesky Factorization</div>
-
-                        <p>
-                            In this project, developed in collaboration with a colleague from the University of Pisa, we
-                            used an altered optimisation algorithm to calculate a low rank approximation of a matrix A.
-                            This optimisation makes use of the Normal Equation and the Cholesky factorisation. We have
-                            both provided a mathematical analysis of the convergence of the algorithm and implemented
-                            the Cholesky algorithm from scratch.
-                        </p>
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-2xl font-bold mb-2 campari-text-red">Irony and Sarcasm detection in tweets</h3>
+                        <p class="mb-4 text-sm">In this project, developed in collaboration with a colleague from the University of Pisa, I implemented several machine learning models to solve the tasks of the EVALITA challenge.</p>
+                        <a href="https://github.com/MatteoMass/IronySarcasmDetectorIT" target="_blank" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Link &rarr;</a>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">April 2021</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Index for Predecessor problems</h3>
-                        <div class="subheading mb-3">C++</div>
-
-                        <p>
-                            In this project, I have designed and implemented a compressed data structure, which is able
-                            to veil the finding of a certain element. Specifically, an integer is provided and one must
-                            search within the data structure for the largest number preceding the one passed as a
-                            parameter.
-                        </p>
-                        <a href="https://github.com/MatteoMass/AEchallenge" target="_blank">View on Github </a>
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-2xl font-bold mb-2 campari-text-red">Low Rank Approximation with Normal Equation and Cholesky Factorization</h3>
+                        <p class="mb-4 text-sm">In this project, developed in collaboration with a colleague from the University of Pisa, we used an altered optimisation algorithm to calculate a low rank approximation of a matrix A.</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">February 2021</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Analysis of Purchasing Data</h3>
-                        <div class="subheading mb-3">Python, Pandas, Scikit-learn</div>
-
-                        <p>
-                            In this project, I have designed and implemented a compressed data structure, which is able
-                            to veil the finding of a certain element. Specifically, an integer is provided and one must
-                            search within the data structure for the largest number preceding the one passed as a
-                            parameter.
-                        </p>
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-2xl font-bold mb-2 campari-text-red">Genetic Algorithm and Parallelism for Traveler Salesman Problem</h3>
+                        <p class="mb-4 text-sm">In this project, I implemented a genetic algorithm to solve the travelling salesman problem on a parameterisable number of nodes. To speed up the evolution process, I used and compared two parallelisation techniques: C++ threads and the FastFlow library.</p>
+                        <a href="https://github.com/MatteoMass/GeneticTSP" target="_blank" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Link &rarr;</a>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">January 2021</span></div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Genetic Algorithm and Parallelism for Traveler Salesman Problem</h3>
-                        <div class="subheading mb-3">C++, Genetic Algorithm, FastFlow</div>
-
-                        <p>
-                            In this project, I implemented a genetic algorithm to solve the travelling salesman problem
-                            on a parameterisable number of nodes. To speed up the evolution process, I used and compared
-                            two parallelisation techniques: C++ threads and the FastFlow library.
-                        </p>
-                        <a href="https://github.com/MatteoMass/GeneticTSP" target="_blank">View on Github </a>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2020</span></div>
+                <div class="flex justify-center pt-20">
+                    <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
+                        <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
+                        <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
+                        <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
                 </div>
-
-
             </div>
         </section>
 
-
-            <hr class="m-0" />
-
-            <!-- Mobile Apps-->
-            <section class="resume-section" id="mobile-applications">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Mobile Applications</h2>
-
-					<p>Some of the mobile applications I've developed.</p>
-
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">MoneyTrack</h3>
-                            <div class="subheading mb-3">Flutter</div>
-
-							<p>
-                                MoneyTrack allows the user to track and review all the earning and expenses. 
-                                The main goal of MoneyTrack is to be simple to use, to provide a quick way to enter a new expense or income (in app called Bids) and an intuitive category management.
-							</p>
-							<a href="https://matteomass.github.io/MoneyTrackApp" target="_blank">Website</a>
+        <!-- Sezione Work Experience -->
+        <section id="experience" class="py-20 px-[5%] campari-bg-cream">
+            <div class="container mx-auto">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Machine Learning Engineer</h3>
+                            <p class="font-semibold campari-text-red">Machine Learning Reply | 2024 - Present</p>
+                            <p class="mt-2 text-sm">Machine Learning Engineer employed in implementing products and solutions for different types of customers, mainly using the Google Cloud Platform.</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2023 - January 2024</span></div>
                     </div>
-
-
-                    
-					                    
-					
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Software Developer</h3>
+                            <p class="font-semibold campari-text-red">Micra s.r.l. | 2021 - 2024</p>
+                            <p class="mt-2 text-sm">Full Stack Developer of products, services and platforms in banking and industry. Within the Research and Development group, I've contributed to the study of new technologies, including Machine Learning and Artificial Intelligence, aimed at improving company's products and identifying new possibile solutions for the customers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Stage</h3>
+                            <p class="font-semibold campari-text-red">Università degli studi di Perugia | 2018</p>
+                            <p class="mt-2 text-sm">Programming of a plug-in for the Moodle platform, which could facilitate and automate the administration and correction of multiplechoice questionnaires in order to test the knowledge of a large group of university students efficiently.</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-
-        <hr class="m-0" />
-
-
-        <!-- Experience-->
-        <section class="resume-section" id="experience">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Machine Learning Engineer</h3>
-                        <div class="subheading mb-3">Machine Learning Reply</div>
-                        <p>Machine Learning Engineer employed in implementing products and solutions for different types of customers, mainly using the Google Cloud Platform.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">January 2024 - Present</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Software Developer</h3>
-                        <div class="subheading mb-3">Micra s.r.l.</div>
-                        <p>Full Stack Developer of products, services and platforms in banking and industry.<br />
-                            Within the Research and Development group, I've contributed to the study of new
-                            technologies, including
-                            Machine Learning and Artificial Intelligence, aimed at improving company's products and
-                            identifying new
-                            possibile solutions for the customers.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2021 - January 2024</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Stage</h3>
-                        <div class="subheading mb-3">Università degli studi di Perugia </div>
-                        <p>Programming of a plug-in for the Moodle platform, which could facilitate and automate the
-                            administration and correction of multiplechoice questionnaires in order to test the
-                            knowledge of a large group of university students efficiently.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2018 - December 2018</span></div>
+                <div class="flex justify-center pt-20">
+                    <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
+                        <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
+                        <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
+                        <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
                 </div>
             </div>
         </section>
-        <hr class="m-0" />
-        <!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Università di Pisa</h3>
-                        <div class="subheading mb-3">Master's Degree in Computer Sciences</div>
-                        <div>Curriculum Artificial Intelligence</div>
-                        <p>Final mark: 110/110 e lode</p>
-                        <p>Thesis: Leveraging Physical Cues for Learned Representations in Visual Question Answering</p>
+        
+        <!-- Sezione Education -->
+        <section id="education" class="py-20 px-[5%]" style="background-color: var(--campari-dark-cream);">
+            <div class="container mx-auto text-center">
+                <h2 class="section-title">Education</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold">Master's Degree in Computer Sciences</h3>
+                        <p class="text-xl campari-text-red">Università di Pisa | 2019 - 2023</p>
+                        <p class="mt-2">Curriculum Artificial Intelligence - Final mark: 110/110 e lode</p>
+                        <p class="mt-2">Thesis: Leveraging Physical Cues for Learned Representations in Visual Question Answering</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2019 - July 2023</span></div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold">Bachelor's Degree in Computer Science</h3>
+                        <p class="text-xl campari-text-red">Università degli Studi di Perugia | 2016 - 2019</p>
+                        <p class="mt-2">Final mark: 110/110 e lode</p>
+                        <p class="mt-2">Thesis: Multidimensional Link Prediction</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Diploma in Administration, Finance and Marketing</h3>
+                        <p class="text-xl campari-text-red">Istituto R. Bonghi, Assisi | 2011 - 2016</p>
+                        <p class="mt-2">Final mark: 98/100</p>
+                    </div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Università degli Studi di Perugia </h3>
-                        <div class="subheading mb-3">Bachelor's Degree in Computer Science</div>
-                        <p>Final mark: 110/110 e lode</p>
-                        <p>Thesis: Multidimensional Link Prediction</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2016 - September 2019</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Istituto R. Bonghi, Assisi</h3>
-                        <div class="subheading mb-3">Diploma in Administration, Finance and Marketing</div>
-                        <p>Final mark: 98/100</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2009 - June 2016</span></div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-
-        <!-- Certifications -->
-        <section class="resume-section" id="certifications">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Certifications</h2>
-
-                <p>The certifications I've achieved, in chronological order.</p>
-
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Google Cloud</h3>
-                        <div class="subheading mb-3">Professional Machine Learning Engineer</div>
-
-                        <a href="https://www.credly.com/badges/1500027c-cfce-48f7-b3c3-7a17ac5f95c5/public_url"
-                            target="_blank">Badge</a>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">October 2024</span></div>
-                </div>
-
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Trinity college London </h3>
-                        <div class="subheading mb-3">ISE III Integrated Skills in English (CEFR Level C1)</div>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2023</span></div>
+                <div class="flex justify-center pt-20">
+                    <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
+                        <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
+                        <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
+                        <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
                 </div>
             </div>
         </section>
-        <hr class="m-0" />
-
-
-
-        <!-- Skills-->
-        <section class="resume-section" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Machine Learning & Data Analysis</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item">TensorFlow</li>
-                    <li class="list-inline-item">Keras</li>
-                    <li class="list-inline-item">Pytorch</li>
-                    <li class="list-inline-item">Scikit-learn</li>
-                    <li class="list-inline-item">Spacy</li>
-                    <li class="list-inline-item">Pandas</li>
-                </ul>
-                <div class="subheading mb-3">Programming Languages</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item">Python</li>
-                    <li class="list-inline-item">C</li>
-                    <li class="list-inline-item">C++</li>
-                    <li class="list-inline-item">Java</li>
-                    <li class="list-inline-item">Julia</li>
-                    <li class="list-inline-item">HTML</li>
-                    <li class="list-inline-item">CSS</li>
-                    <li class="list-inline-item">Javascript</li>
-                    <li class="list-inline-item">Typescript</li>
-                    <li class="list-inline-item">AngularJS</li>
-                    <li class="list-inline-item">PHP</li>
-                    <li class="list-inline-item">SQL</li>
-                    <li class="list-inline-item">Solidity</li>
-                    <li class="list-inline-item">Latex</li>
-
-                </ul>
-                <div class="subheading mb-3">Programming Platforms and Tools</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item">Git</li>
-                    <li class="list-inline-item">Github</li>
-                    <li class="list-inline-item">Visual Studio Code</li>
-                    <li class="list-inline-item">Python Anaconda</li>
-                    <li class="list-inline-item">Eclipse IDE</li>
-                    <li class="list-inline-item">Android Studio</li>
-                    <li class="list-inline-item">Overleaf</li>
-                    <li class="list-inline-item">Remix IDE</li>
-                </ul>
+        
+        <!-- MODIFICA: Nuova Sezione Certificazioni -->
+        <section id="certifications" class="py-20 px-[5%] campari-bg-cream">
+            <div class="container mx-auto">
+                <h2 class="section-title">Certifications</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="card flex flex-col h-full text-center">
+                        <h3 class="text-2xl font-bold campari-text-red">Professional Cloud Developer</h3>
+                        <p class="mt-2 text-lg font-semibold">Google Cloud</p>
+                        <p class="text-sm opacity-80">June 2025</p>
+                        <p class="mb-4 text-sm"></p>
+                        <a href="https://www.credly.com/badges/4ffbda64-5c4b-4952-95c7-cc39367f5c2b/public_url" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Badge &rarr;</a>
+                    </div>
+                    <div class="card flex flex-col h-full text-center">
+                        <h3 class="text-2xl font-bold campari-text-red">Professional Machine Learning Engineer</h3>
+                        <p class="mt-2 text-lg font-semibold">Google Cloud</p>
+                        <p class="text-sm opacity-80">October 2024</p>
+                        <p class="mb-4 text-sm"></p>
+                        <a href="https://www.credly.com/badges/1500027c-cfce-48f7-b3c3-7a17ac5f95c5/public_url" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Badge &rarr;</a>
+                    </div>
+                    <div class="card flex flex-col h-full text-center">
+                        <h3 class="text-2xl font-bold campari-text-red">ISE III Integrated Skills in English (CEFR Level C1)</h3>
+                        <p class="mt-2 text-lg font-semibold">Trinity college London</p>
+                        <p class="text-sm opacity-80">July 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center pt-20">
+                <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
+                    <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
+                    <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
+                    <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
+                </svg>
             </div>
         </section>
 
+    </main>
+    
+    <!-- Footer -->
+    <footer class="campari-bg-blue campari-text-cream py-10 px-[5%] text-center border-t-4 border-campari-red">
+        <div class="container mx-auto">
+            <p class="font-serif text-2xl mb-4">Contacts</p>
+             <div class="flex justify-center space-x-6 mt-4">
+                 <a href="https://www.linkedin.com/in/matteo-massetti-5bab15215/" target = "_blank" class="hover:campari-text-orange transition-colors text-lg">LinkedIn</a>
+                 <span class="opacity-50">/</span>
+                 <a href="https://github.com/MatteoMass" target = "_blank"  class="hover:campari-text-orange transition-colors text-lg">GitHub</a>
+                 <span class="opacity-50">/</span>
+                 <a href="mailto:matteomassetti8@gmail.com" class="hover:campari-text-orange transition-colors text-lg">Email</a>
+             </div>
+             <p class="mt-8 text-sm opacity-70">&copy; 2025 Matteo Massetti. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <hr class="m-0" />
+    <script>
+        // Script per il menu mobile (invariato)
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+        // Chiudi il menu mobile quando si clicca un link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
-
 </html>
+

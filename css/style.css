@@ -1,0 +1,132 @@
+:root {
+    --campari-red: #c81d25;
+    --campari-orange: #f39c12;
+    --campari-blue: #001f3f;
+    --campari-cream: #fdf6e3;
+    --campari-dark-cream: #f4ead6;
+}
+
+/* MODIFICA: Aggiunto un pattern di sfondo per un look "poster" e una texture più ricca */
+body {
+    background-color: var(--campari-cream);
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    color: var(--campari-blue);
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* MODIFICA: Classi personalizzate per i colori, per coerenza */
+.campari-bg-red { background-color: var(--campari-red); }
+.campari-bg-blue { background-color: var(--campari-blue); }
+.campari-bg-cream { background-color: var(--campari-cream); }
+.campari-text-red { color: var(--campari-red); }
+.campari-text-orange { color: var(--campari-orange); }
+.campari-text-blue { color: var(--campari-blue); }
+.campari-text-cream { color: var(--campari-cream); }
+
+/* MODIFICA: Titoli di sezione più audaci in stile Campari */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--campari-red);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 3.5rem;
+    }
+}
+/* Linea decorativa per i titoli */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--campari-orange);
+    margin: 1rem auto 0;
+}
+
+/* MODIFICA: Card progetto con uno stile più grafico e meno "corporate" */
+.card {
+    background-color: white;
+    border-radius: 4px; /* Angoli meno arrotondati, più decisi */
+    box-shadow: 5px 5px 0px 0px var(--campari-blue); /* Ombra netta, stile grafico */
+    border: 2px solid var(--campari-blue);
+    transition: all 0.3s ease-in-out;
+    padding: 1.5rem;
+}
+.card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0px 0px var(--campari-orange);
+}
+
+/* MODIFICA: Timeline più stilizzata e in linea con la palette */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--campari-blue);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+/* Cerchio sulla timeline */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: var(--campari-red);
+    border: 4px solid var(--campari-orange);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-left { left: 0; }
+.timeline-right { left: 50%; }
+
+.timeline-right::after { left: -10px; }
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    border: 2px solid var(--campari-blue);
+}
+
+/* Responsive timeline */
+@media screen and (max-width: 768px) {
+    .timeline::after { left: 15px; }
+    .timeline-container {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+    }
+    .timeline-container::before { content: none; } /* Rimuoviamo le frecce su mobile */
+    .timeline-left::after, .timeline-right::after {
+        left: 5px;
+    }
+    .timeline-right { left: 0%; }
+}
