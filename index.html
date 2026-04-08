@@ -19,11 +19,11 @@
             <div class="text-2xl font-bold font-serif tracking-wider">Matteo Massetti</div>
             <nav class="hidden md:flex space-x-6 items-center">
                 <a href="#about" class="hover:campari-text-orange transition duration-300">About</a>
-                <a href="#projects" class="hover:campari-text-orange transition duration-300">Projects</a>
                 <a href="#experience" class="hover:campari-text-orange transition duration-300">Experience</a>
+                <a href="#projects" class="hover:campari-text-orange transition duration-300">Personal Projects</a>
                 <a href="#education" class="hover:campari-text-orange transition duration-300">Education</a>
-                <!-- MODIFICA: Aggiunto link Certificazioni -->
                 <a href="#certifications" class="hover:campari-text-orange transition duration-300">Certifications</a>
+                <a href="#altro" class="hover:campari-text-orange transition duration-300">Altro</a>
                 <a href="#skills" class="hover:campari-text-orange transition duration-300">Skills</a>
             </nav>
             <button id="menu-btn" class="md:hidden focus:outline-none">
@@ -35,11 +35,11 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden mt-4">
             <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
-            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-700">Projects</a>
             <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-700">Experience</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-700">Personal Projects</a>
             <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-700">Education</a>
-            <!-- MODIFICA: Aggiunto link Certificazioni -->
             <a href="#certifications" class="block py-2 px-4 text-sm hover:bg-gray-700">Certifications</a>
+            <a href="#altro" class="block py-2 px-4 text-sm hover:bg-gray-700">Altro</a>
             <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-700">Skills</a>
         </div>
     </header>
@@ -66,19 +66,63 @@
             </div>
         </section>
 
-        <!-- Sezione Progetti -->
-        <section id="projects" class="py-20 px-[5%]" style="background-color: var(--campari-dark-cream);">
+        <!-- Sezione Work Experience -->
+        <section id="experience" class="py-20 px-[5%]" style="background-color: var(--campari-dark-cream);">
             <div class="container mx-auto">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Senior Machine Learning Engineer</h3>
+                            <p class="font-semibold campari-text-red">Machine Learning Reply | 2026 - Present</p>
+                            <p class="mt-2 text-sm">Leading the design and delivery of end-to-end machine learning and generative ai solutions for enterprise customers. Responsible for defining technical architecture, guiding junior engineers, and ensuring the quality and scalability. Involved in pre-sales activities, technical proposals, and cross-team collaboration to drive innovation and deliver measurable business impact.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Machine Learning Engineer</h3>
+                            <p class="font-semibold campari-text-red">Machine Learning Reply | 2024 - 2026</p>
+                            <p class="mt-2 text-sm">Machine Learning Engineer employed in implementing products and solutions for different types of customers, mainly using the Google Cloud Platform.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Software Developer</h3>
+                            <p class="font-semibold campari-text-red">Micra s.r.l. | 2021 - 2024</p>
+                            <p class="mt-2 text-sm">Full Stack Developer of products, services and platforms in banking and industry. Within the Research and Development group, I've contributed to the study of new technologies, including Machine Learning and Artificial Intelligence, aimed at improving company's products and identifying new possibile solutions for the customers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Stage</h3>
+                            <p class="font-semibold campari-text-red">Università degli studi di Perugia | 2018</p>
+                            <p class="mt-2 text-sm">Programming of a plug-in for the Moodle platform, which could facilitate and automate the administration and correction of multiplechoice questionnaires in order to test the knowledge of a large group of university students efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center pt-20">
+                    <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
+                        <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
+                        <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
+                        <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Personal Projects -->
+        <section id="projects" class="py-20 px-[5%] campari-bg-cream">
+            <div class="container mx-auto">
+                <h2 class="section-title">Personal Projects</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                     <div class="card flex flex-col h-full">
                         <h3 class="text-2xl font-bold mb-2 campari-text-red">MoneyTrack</h3>
                         <p class="mb-4 text-sm">
-                          An Android application that allows the user to track and review all the earning and expenses. 
-                          The main goal of MoneyTrack is to be simple to use, to provide a quick way to enter a new 
+                          An Android application that allows the user to track and review all the earning and expenses.
+                          The main goal of MoneyTrack is to be simple to use, to provide a quick way to enter a new
                           expense or income (in app called Bids) and an intuitive category management.
                         </p>
-                        <a href="https://matteomass.github.io/MoneyTrackApp/" target="_blank" 
+                        <a href="https://matteomass.github.io/MoneyTrackApp/" target="_blank"
                            class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">
                            Link &rarr;
                         </a>
@@ -106,43 +150,6 @@
                         <h3 class="text-2xl font-bold mb-2 campari-text-red">Genetic Algorithm and Parallelism for Traveler Salesman Problem</h3>
                         <p class="mb-4 text-sm">In this project, I implemented a genetic algorithm to solve the travelling salesman problem on a parameterisable number of nodes. To speed up the evolution process, I used and compared two parallelisation techniques: C++ threads and the FastFlow library.</p>
                         <a href="https://github.com/MatteoMass/GeneticTSP" target="_blank" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Link &rarr;</a>
-                    </div>
-                </div>
-                <div class="flex justify-center pt-20">
-                    <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
-                        <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
-                        <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
-                        <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sezione Work Experience -->
-        <section id="experience" class="py-20 px-[5%] campari-bg-cream">
-            <div class="container mx-auto">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-container timeline-left">
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Machine Learning Engineer</h3>
-                            <p class="font-semibold campari-text-red">Machine Learning Reply | 2024 - Present</p>
-                            <p class="mt-2 text-sm">Machine Learning Engineer employed in implementing products and solutions for different types of customers, mainly using the Google Cloud Platform.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-container timeline-right">
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Software Developer</h3>
-                            <p class="font-semibold campari-text-red">Micra s.r.l. | 2021 - 2024</p>
-                            <p class="mt-2 text-sm">Full Stack Developer of products, services and platforms in banking and industry. Within the Research and Development group, I've contributed to the study of new technologies, including Machine Learning and Artificial Intelligence, aimed at improving company's products and identifying new possibile solutions for the customers.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-container timeline-left">
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Stage</h3>
-                            <p class="font-semibold campari-text-red">Università degli studi di Perugia | 2018</p>
-                            <p class="mt-2 text-sm">Programming of a plug-in for the Moodle platform, which could facilitate and automate the administration and correction of multiplechoice questionnaires in order to test the knowledge of a large group of university students efficiently.</p>
-                        </div>
                     </div>
                 </div>
                 <div class="flex justify-center pt-20">
@@ -218,13 +225,35 @@
                 <svg width="100" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-campari-orange">
                     <path d="M50 1L59.5263 10L50 19L40.4737 10L50 1Z" stroke="currentColor" stroke-width="2"/>
                     <line y1="9" x2="35" y2="9" stroke="currentColor" stroke-width="2"/>
-                    <line x1="65" y1="9" x2="100" y2="9" stroke="currentColor" stroke-width="2"/>
+                    <line x1="65" y1="9" x2="100" y2="9" strfine"currentColor" stroke-width="2"/>
                 </svg>
             </div>
         </section>
 
+        <!-- Sezione Altro -->
+        <section id="altro" class="py-20 px-[5%]" style="background-color: var(--campari-dark-cream);">
+            <div class="container mx-auto">
+                <h2 class="section-title">Miscellaneous</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-xl font-bold mb-2 campari-text-red">
+L’infinito che ci rassicura e assopisce</h3>
+                        <p class="mb-4 text-sm">Quid 16: La fine</p>
+                        QUID is Mensa Italia's digital magazine. Each volume is monographic and addresses a topic in a multidisciplinary manner, from diverse and often surprising perspectives.
+                        <a href="https://quid.mensa.it/numeri/quid-16-la-fine/linfinito-che-ci-rassicura-e-assopisce/" target="_blank" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Leggi l'articolo &rarr;</a>
+                    </div>
+                    <div class="card flex flex-col h-full">
+                        <h3 class="text-xl font-bold mb-2 campari-text-red">Questione di Scale
+</h3>
+                        <p class="mb-4 text-sm">Quid 14: Intelligenza Artificiale</p>QUID is Mensa Italia's digital magazine. Each volume is monographic and addresses a topic in a multidisciplinary manner, from diverse and often surprising perspectives.
+                        <a href="https://quid.mensa.it/numeri/quid-14-intelligenza-artificiale/questione-di-scale" target="_blank" class="mt-auto font-bold campari-text-blue hover:campari-text-orange transition-colors">Leggi l'articolo &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
-    
+
     <!-- Footer -->
     <footer class="campari-bg-blue campari-text-cream py-10 px-[5%] text-center border-t-4 border-campari-red">
         <div class="container mx-auto">
