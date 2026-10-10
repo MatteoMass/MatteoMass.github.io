@@ -1,0 +1,48 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cv/**"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-cv
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile cv.pdf with LuaLaTeX
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: full
+          run: |
+            cd cv
+            make cv.pdf
+
+      - name: Copy CV to assets
+        run: |
+          mkdir -p assets/cv
+          cp cv/cv.pdf assets/cv/Matteo_Massetti_CV.pdf
+
+      - name: Commit updated CV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cv/Matteo_Massetti_CV.pdf
+          if git diff --cached --quiet; then
+            echo "CV unchanged, nothing to commit."
+          else
+            git commit -m "chore: update compiled CV [skip ci]"
+            git push
+          fi
