@@ -79,7 +79,7 @@
 \RequirePackage{fontawesome6}
 \RequirePackage{accsupp}
 \defaultfontfeatures{
-  Renderer=HarfBuzz,
+  Renderer=Node,
 }
 \setmainfont{Source Sans 3}[
   UprightFont=*,
@@ -175,7 +175,7 @@
 \definecolor{awesome-nephritis}{HTML}{27AE60}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-skyblue}
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
@@ -526,8 +526,8 @@
     \setlength{\headertextwidth}{\textwidth}
     \setlength{\headerphotowidth}{0cm}
   }{%
-    \setlength{\headertextwidth}{0.76\textwidth}
-    \setlength{\headerphotowidth}{0.24\textwidth}
+    \setlength{\headertextwidth}{0.82\textwidth}
+    \setlength{\headerphotowidth}{0.18\textwidth}
   }%
   \begin{minipage}[c]{\headerphotowidth}%
     \ifthenelse{\equal{\@photoalign}{left}}{\raggedright\drawphoto}{}
